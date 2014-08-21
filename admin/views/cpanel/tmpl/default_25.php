@@ -1,16 +1,11 @@
 <?php
-/**
- * @package    DPCalendar
- * @author     Digital Peak http://www.digital-peak.com
- * @copyright  Copyright (C) 2007 - 2014 Digital Peak. All rights reserved.
- * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL
- */
+
 defined('_JEXEC') or die();
 ?>
 <div style="width:500px;">
-<h2><?php echo JText::_('COM_DPCALENDAR_VIEW_CPANEL_WELCOME'); ?></h2>
+<h2><?php echo JText::_('COM_BOOKMARKS_DIDDIPOELER_VIEW_CPANEL_WELCOME'); ?></h2>
 <p>
-<?php echo JText::_('COM_DPCALENDAR_VIEW_CPANEL_INTRO'); ?>
+<?php echo JText::_('COM_BOOKMARKS_DIDDIPOELER_VIEW_CPANEL_INTRO'); ?>
 </p>
 <br>
 
@@ -40,16 +35,7 @@ defined('_JEXEC') or die();
                 <span><?php echo JText::_('COM_DPCALENDAR_VIEW_CPANEL_LOCATIONS'); ?></span>
                 </a>
             </div>
-            <?php if (!DPCalendarHelper::isFree())
-            {?>
-            <div class="icon">
-                <a href="index.php?option=com_dpcalendar&view=attendees" >
-                <img src="<?php echo JURI::base(true);?>/../media/com_dpcalendar/images/admin/48-attendees.png" height="50px" width="50px">
-                <span><?php echo JText::_('COM_DPCALENDAR_VIEW_CPANEL_ATTENDEES'); ?></span>
-                </a>
-            </div>
-            <?php
-            }?>
+           
             <div class="icon">
                 <a href="index.php?option=com_dpcalendar&view=tools" >
                 <img src="<?php echo JURI::base(true);?>/../media/com_dpcalendar/images/admin/48-tools.png" height="50px" width="50px">
@@ -71,13 +57,9 @@ defined('_JEXEC') or die();
     </div>
 </div>
 </div>
-<a class="twitter-timeline" href="https://twitter.com/digitpeak" data-widget-id="346951058737750017">Tweets by @digitpeak</a>
-<script>!function(d,s,id){
-	var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-	if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
-	fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
 
 <div align="center" style="clear: both">
 	<br>
-	<?php echo sprintf(JText::_('COM_DPCALENDAR_FOOTER'), JRequest::getVar('DPCALENDAR_VERSION'));?>
+	<?php echo sprintf(JText::_('COM_BOOKMARKS_DIDDIPOELER_FOOTER'), JRequest::getVar('DPCALENDAR_VERSION'));?>
 </div>

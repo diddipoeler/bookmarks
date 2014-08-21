@@ -17,11 +17,11 @@ class bookmarks_diddipoelerView extends JViewLegacy
 			return false;
 		}
 
-		if (DPCalendarHelper::isJoomlaVersion('2.5'))
+		if (bookmarksHelper::isJoomlaVersion('2.5'))
 		{
 			$this->setLayout($this->getLayout() . '_25');
 		}
-		if (DPCalendarHelper::isJoomlaVersion('3'))
+		if (bookmarksHelper::isJoomlaVersion('3'))
 		{
 			$this->setLayout($this->getLayout() . '_3');
 		}
@@ -34,11 +34,11 @@ class bookmarks_diddipoelerView extends JViewLegacy
 
 	protected function addToolbar ()
 	{
-		$canDo = DPCalendarHelper::getActions();
+		$canDo = bookmarksHelper::getActions();
 
 		if (empty($this->title))
 		{
-			$this->title = 'COM_DPCALENDAR_MANAGER_' . strtoupper($this->getName());
+			$this->title = 'COM_BOOKMARKS_DIDDIPOELER_MANAGER_' . strtoupper($this->getName());
 		}
 		if (empty($this->icon))
 		{

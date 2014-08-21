@@ -10,12 +10,12 @@ class bookmarks_diddipoelerController extends JControllerLegacy
 		$view = JRequest::setVar('view', JRequest::getCmd('view', 'cpanel'));
 		$layout = JRequest::getCmd('layout', 'default');
 		$id = JRequest::getInt('id');
-/*
+
 		if ($view != 'event' && $view != 'location' && $view != 'attendee')
 		{
-			DPCalendarHelper::addSubmenu(JRequest::getCmd('view', 'cpanel'));
+			bookmarksHelper::addSubmenu(JRequest::getCmd('view', 'cpanel'));
 		}
-
+/*
 		// Check for edit form.
 		if ($view == 'event' && $layout == 'edit' && ! $this->checkEditId('com_dpcalendar.edit.event', $id))
 		{
