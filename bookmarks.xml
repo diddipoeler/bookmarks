@@ -39,7 +39,7 @@
 		in this section are copied from /site/ in the package -->
 	<files folder="site">
 		<filename>index.html</filename>
-		<filename>sportsmanagement.php</filename>
+		<filename>bookmarks.php</filename>
 		<filename>controller.php</filename>
 		<folder>views</folder>
 		<folder>helpers</folder>
@@ -67,7 +67,7 @@
 			<filename>index.html</filename>
 			<filename>config.xml</filename>
 			<filename>access.xml</filename>
-			<filename>sportsmanagement.php</filename>
+			<filename>bookmarks.php</filename>
 			<filename>controller.php</filename>
 			<!-- assets files section -->
 			<folder>assets</folder>
