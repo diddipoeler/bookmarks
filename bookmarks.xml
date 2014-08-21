@@ -39,7 +39,7 @@
 		in this section are copied from /site/ in the package -->
 	<files folder="site">
 		<filename>index.html</filename>
-		<filename>bookmarks.php</filename>
+		<filename>bookmarks_diddipoeler.php</filename>
 		<filename>controller.php</filename>
 		<folder>views</folder>
 		<folder>helpers</folder>
@@ -48,12 +48,34 @@
 		<folder>settings</folder>
 		<folder>controllers</folder>
 		<folder>language</folder>
-		
 	</files>
+
+<!--	
+	<media destination="com_bookmarks_diddipoeler" folder="media/com_bookmarks_diddipoeler">
+		<filename>index.html</filename>
+	  <filename>ext_tem.png</filename>
+	  <filename>ext_com.png</filename>
+	  <filename>ext_esp.png</filename>
+	  <filename>ext_lang.png</filename>
+	  <filename>ext_mod.png</filename>
+	  <filename>ext_plugin.png</filename>
+	</media>
+-->
+	
 	<languages folder="site">
 		<language tag="de-DE">language/de-DE/de-DE.com_bookmarks_diddipoeler.ini</language>
 		<language tag="en-GB">language/en-GB/en-GB.com_bookmarks_diddipoeler.ini</language>
 	</languages>
+	
+  <media destination="com_bookmarks_diddipoeler" folder="media/com_bookmarks_diddipoeler">
+		<filename>index.html</filename>
+	  <filename>ext_tem.png</filename>
+	  <filename>ext_com.png</filename>
+	  <filename>ext_esp.png</filename>
+	  <filename>ext_lang.png</filename>
+	  <filename>ext_mod.png</filename>
+	  <filename>ext_plugin.png</filename>
+	</media>
 	
 	<administration>
 		<!-- Administration Menu Section -->
@@ -67,7 +89,7 @@
 			<filename>index.html</filename>
 			<filename>config.xml</filename>
 			<filename>access.xml</filename>
-			<filename>bookmarks.php</filename>
+			<filename>bookmarks_diddipoeler.php</filename>
 			<filename>controller.php</filename>
 			<!-- assets files section -->
 			<folder>assets</folder>

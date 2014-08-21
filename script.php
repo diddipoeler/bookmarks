@@ -59,7 +59,7 @@ class com_bookmarks_diddipoelerInstallerScript
 						'allowAllClose' => true,
 						'startTransition' => true,
 						true));
-       $image = '<img src="../media/com_sportsmanagement/jl_images/ext_com.png">';
+       $image = '<img src="../media/com_bookmarks_diddipoeler/ext_com.png">';
 		echo JHtml::_('sliders.panel', $image.' Component', 'panel-component');                      
 		// $parent is the class calling this method
 		// $type is the type of change (install, update or discover_install)
@@ -113,13 +113,13 @@ switch ($type)
     case "install":
     self::setParams($newparams);
 //    self::installComponentLanguages();
-$image = '<img src="../media/com_bookmarks_diddipoeler/jl_images/ext_mod.png">';
+$image = '<img src="../media/com_bookmarks_diddipoeler/ext_mod.png">';
 		echo JHtml::_('sliders.panel', $image.' Modules', 'panel-modules');
   //  self::installModules($parent);
-    $image = '<img src="../media/com_bookmarks_diddipoeler/jl_images/ext_plugin.png">';
+    $image = '<img src="../media/com_bookmarks_diddipoeler/ext_plugin.png">';
 		echo JHtml::_('sliders.panel', $image.' Plugins', 'panel-plugins');
    // self::installPlugins($parent);
-    $image = '<img src="../media/com_bookmarks_diddipoeler/jl_images/ext_esp.png">';
+    $image = '<img src="../media/com_bookmarks_diddipoeler/ext_esp.png">';
 		echo JHtml::_('sliders.panel', $image.' Create/Update Images Folders', 'panel-images');
    // self::createImagesFolder();
 //    self::migratePicturePath();
@@ -128,13 +128,13 @@ $image = '<img src="../media/com_bookmarks_diddipoeler/jl_images/ext_mod.png">';
     break;
     case "update":
 //    self::installComponentLanguages();
-$image = '<img src="../media/com_bookmarks_diddipoeler/jl_images/ext_mod.png">';
+$image = '<img src="../media/com_bookmarks_diddipoeler/ext_mod.png">';
 		echo JHtml::_('sliders.panel', $image.' Modules', 'panel-modules');
     //self::installModules($parent);
-    $image = '<img src="../media/com_bookmarks_diddipoeler/jl_images/ext_plugin.png">';
+    $image = '<img src="../media/com_bookmarks_diddipoeler/ext_plugin.png">';
 		echo JHtml::_('sliders.panel', $image.' Plugins', 'panel-plugins');
     //self::installPlugins($parent);
-    $image = '<img src="../media/com_bookmarks_diddipoeler/jl_images/ext_esp.png">';
+    $image = '<img src="../media/com_bookmarks_diddipoeler/ext_esp.png">';
 		echo JHtml::_('sliders.panel', $image.' Create/Update Images Folders', 'panel-images');
     //self::createImagesFolder();
 //    self::migratePicturePath();
