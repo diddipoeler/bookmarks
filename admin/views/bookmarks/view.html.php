@@ -10,6 +10,15 @@ defined('_JEXEC') or die();
 
 JLoader::import('components.com_bookmarksdiddipoeler.libraries.bookmarks.view', JPATH_ADMINISTRATOR);
 
+/**
+ * bookmarksdiddipoelerViewbookmarks
+ * 
+ * @package 
+ * @author diddi
+ * @copyright 2014
+ * @version $Id$
+ * @access public
+ */
 class bookmarksdiddipoelerViewbookmarks extends bookmarksdiddipoelerView
 {
 
@@ -19,17 +28,24 @@ class bookmarksdiddipoelerViewbookmarks extends bookmarksdiddipoelerView
 
 	protected $state;
 
-	//protected $authors;
-
+	/**
+	 * bookmarksdiddipoelerViewbookmarks::init()
+	 * 
+	 * @return void
+	 */
 	public function init ()
 	{
 		$this->setModel(JModelLegacy::getInstance('bookmarks', 'bookmarksdiddipoelerModel'), true);
 		$this->state = $this->get('State');
 		$this->items = $this->get('Items');
 		$this->pagination = $this->get('Pagination');
-		//$this->authors = $this->get('Authors');
 	}
 
+	/**
+	 * bookmarksdiddipoelerViewbookmarks::addToolbar()
+	 * 
+	 * @return
+	 */
 	protected function addToolbar ()
 	{
 		if (strpos($this->getLayout(), 'modal') !== false)

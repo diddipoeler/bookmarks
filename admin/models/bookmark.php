@@ -1,9 +1,24 @@
 <?php
-
+/**
+ * @package    bookmark diddipoeler
+ * @author     Dieter Plöger http://www.fussballineuropa.de
+ * @copyright  Copyright (C) 2014 Dieter Plöger. All rights reserved.
+ * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
+ 
 defined('_JEXEC') or die();
 
 JLoader::import('joomla.application.component.modeladmin');
 
+/**
+ * BookmarksdiddipoelerModelBookmark
+ * 
+ * @package 
+ * @author diddi
+ * @copyright 2014
+ * @version $Id$
+ * @access public
+ */
 class BookmarksdiddipoelerModelBookmark extends JModelAdmin
 {
 
@@ -11,6 +26,12 @@ class BookmarksdiddipoelerModelBookmark extends JModelAdmin
 
 //	private $eventHandler = null;
 
+	/**
+	 * BookmarksdiddipoelerModelBookmark::__construct()
+	 * 
+	 * @param mixed $config
+	 * @return void
+	 */
 	public function __construct ($config = array())
 	{
 		parent::__construct($config);
@@ -18,6 +39,14 @@ class BookmarksdiddipoelerModelBookmark extends JModelAdmin
 //		$this->eventHandler = new EventHandler($dispatcher, $this);
 	}
     
+    /**
+     * BookmarksdiddipoelerModelBookmark::getTable()
+     * 
+     * @param string $type
+     * @param string $prefix
+     * @param mixed $config
+     * @return
+     */
     public function getTable ($type = 'bookmarks', $prefix = 'bookmarksdiddipoelerTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
@@ -68,6 +97,12 @@ class BookmarksdiddipoelerModelBookmark extends JModelAdmin
 	}
     
     
+    /**
+     * BookmarksdiddipoelerModelBookmark::get_google_pagerank()
+     * 
+     * @param mixed $url
+     * @return void
+     */
     public function get_google_pagerank($url=NULL) 
  {
     $mainframe = JFactory::getApplication();
@@ -173,6 +208,14 @@ if (!$row->store())
  
  }
 
+ /**
+  * BookmarksdiddipoelerModelBookmark::StrToNum()
+  * 
+  * @param mixed $Str
+  * @param mixed $Check
+  * @param mixed $Magic
+  * @return
+  */
  public function StrToNum($Str, $Check, $Magic)
  {
  $Int32Unit = 4294967296; // 2^32
@@ -190,6 +233,12 @@ if (!$row->store())
  return $Check;
  }
 
+ /**
+  * BookmarksdiddipoelerModelBookmark::HashURL()
+  * 
+  * @param mixed $String
+  * @return
+  */
  public function HashURL($String)
  {
  $Check1 = $this->StrToNum($String, 0x1505, 0x21);
@@ -206,6 +255,12 @@ if (!$row->store())
  return ($T1 | $T2);
  }
 
+ /**
+  * BookmarksdiddipoelerModelBookmark::CheckHash()
+  * 
+  * @param mixed $Hashnum
+  * @return
+  */
  public function CheckHash($Hashnum)
  {
  $CheckByte = 0;

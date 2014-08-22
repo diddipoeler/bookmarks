@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * @package    bookmark diddipoeler
+ * @author     Dieter Plöger http://www.fussballineuropa.de
+ * @copyright  Copyright (C) 2014 Dieter Plöger. All rights reserved.
+ * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
 
 // Check to ensure this file is included in Joomla!
 defined( '_JEXEC' ) or die( 'Restricted access' );
@@ -11,6 +16,15 @@ jimport('joomla.database.table');
 jimport( 'joomla.filter.input' );
 
 
+/**
+ * bookmarksdiddipoelerTablebookmarks
+ * 
+ * @package 
+ * @author diddi
+ * @copyright 2014
+ * @version $Id$
+ * @access public
+ */
 class bookmarksdiddipoelerTablebookmarks extends JTable
 {
 	/**

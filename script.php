@@ -1,12 +1,27 @@
 <?php
-
+/**
+ * @package    bookmark diddipoeler
+ * @author     Dieter Plöger http://www.fussballineuropa.de
+ * @copyright  Copyright (C) 2014 Dieter Plöger. All rights reserved.
+ * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
 
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
+
 jimport('joomla.installer.installer');
- 
 
 
+
+/**
+ * com_bookmarksdiddipoelerInstallerScript
+ * 
+ * @package 
+ * @author diddi
+ * @copyright 2014
+ * @version $Id$
+ * @access public
+ */
 class com_bookmarksdiddipoelerInstallerScript
 {
 	/*
@@ -259,7 +274,7 @@ echo '<pre>' . print_r($paramsString,true). '</pre><br>';
                 if ( count($param_array) > 0 ) {
                         // read the existing component value(s)
                         $db = JFactory::getDbo();
-                        $db->setQuery('SELECT params FROM #__extensions WHERE name = "com_bookmarks_diddipoeler"');
+                        $db->setQuery('SELECT params FROM #__extensions WHERE name = "com_bookmarksdiddipoeler"');
                         $params = json_decode( $db->loadResult(), true );
                         //$mainframe->enqueueMessage(JText::_('setParams params_array<br><pre>'.print_r($param_array,true).'</pre>'   ),'');
                         //$mainframe->enqueueMessage(JText::_('setParams params aus db<br><pre>'.print_r($params,true).'</pre>'   ),'');
@@ -272,7 +287,7 @@ echo '<pre>' . print_r($paramsString,true). '</pre><br>';
                         $paramsString = json_encode( $params );
                         $db->setQuery('UPDATE #__extensions SET params = ' .
                                 $db->quote( $paramsString ) .
-                                ' WHERE name = "com_bookmarks_diddipoeler"' );
+                                ' WHERE name = "com_bookmarksdiddipoeler"' );
                                 $db->query();
                 }
                 

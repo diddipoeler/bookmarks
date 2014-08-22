@@ -1,16 +1,37 @@
 <?php
-
+/**
+ * @package    bookmark diddipoeler
+ * @author     Dieter Plöger http://www.fussballineuropa.de
+ * @copyright  Copyright (C) 2014 Dieter Plöger. All rights reserved.
+ * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
+ 
 // Check to ensure this file is included in Joomla!
 defined('_JEXEC') or die('Restricted access');
 
 // import the Joomla modellist library
 jimport('joomla.application.component.modellist');
 
+/**
+ * bookmarksdiddipoelerModelbookmarks
+ * 
+ * @package 
+ * @author diddi
+ * @copyright 2014
+ * @version $Id$
+ * @access public
+ */
 class bookmarksdiddipoelerModelbookmarks extends JModelList
 {
 	var $_identifier = "bookmarks";
     
     
+    /**
+     * bookmarksdiddipoelerModelbookmarks::__construct()
+     * 
+     * @param mixed $config
+     * @return void
+     */
     public function __construct($config = array())
         {   
                 $config['filter_fields'] = array(
@@ -103,6 +124,11 @@ class bookmarksdiddipoelerModelbookmarks extends JModelList
 	}
     
     
+    /**
+     * bookmarksdiddipoelerModelbookmarks::getListQuery()
+     * 
+     * @return
+     */
     protected function getListQuery()
 	{
 		$mainframe = JFactory::getApplication();

@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * @package    bookmark diddipoeler
+ * @author     Dieter Plöger http://www.fussballineuropa.de
+ * @copyright  Copyright (C) 2014 Dieter Plöger. All rights reserved.
+ * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
+ 
 defined('_JEXEC') or die();
 
 if (! defined('DS'))
@@ -12,17 +18,15 @@ JLoader::import('joomla.application.categories');
 JLoader::import('joomla.environment.browser');
 JLoader::import('joomla.filesystem.file');
 
-//JLoader::register('DPCalendarHelperIcal', JPATH_ADMINISTRATOR . DS . 'components' . DS . 'com_dpcalendar' . DS . 'helpers' . DS . 'ical.php');
-//JLoader::register('DPCalendarHelperLocation', JPATH_ADMINISTRATOR . DS . 'components' . DS . 'com_dpcalendar' . DS . 'helpers' . DS . 'location.php');
-//
-//JLoader::register('DPCalendarHelperPayment', JPATH_ADMINISTRATOR . DS . 'components' . DS . 'com_dpcalendar' . DS . 'helpers' . DS . 'payment.php');
-//
-//if (! class_exists('Mustache'))
-//{
-//	JLoader::register('Mustache',
-//			JPATH_ADMINISTRATOR . DS . 'components' . DS . 'com_dpcalendar' . DS . 'libraries' . DS . 'mustache' . DS . 'Mustache.php');
-//}
-
+/**
+ * bookmarksdiddipoelerHelper
+ * 
+ * @package 
+ * @author diddi
+ * @copyright 2014
+ * @version $Id$
+ * @access public
+ */
 class bookmarksdiddipoelerHelper
 {
 
@@ -30,29 +34,29 @@ class bookmarksdiddipoelerHelper
 
 	private static $calendars = array();
 
+/**
+ * bookmarksdiddipoelerHelper::isJoomlaVersion()
+ * 
+ * @param mixed $version
+ * @return
+ */
 public static function isJoomlaVersion ($version)
 	{
 		$j = new JVersion();
 		return substr($j->RELEASE, 0, strlen($version)) == $version;
 	}
     
+    /**
+     * bookmarksdiddipoelerHelper::addSubmenu()
+     * 
+     * @param string $vName
+     * @return void
+     */
     public static function addSubmenu ($vName = 'cpanel')
 	{
 		JSubMenuHelper::addEntry(JText::_('COM_BOOKMARKSDIDDIPOELER_SUBMENU_CPANEL'), 'index.php?option=com_bookmarksdiddipoeler&view=cpanel', $vName == 'cpanel');
 		JSubMenuHelper::addEntry(JText::_('COM_BOOKMARKSDIDDIPOELER_SUBMENU_BOOKMARKS'), 'index.php?option=com_bookmarksdiddipoeler&view=bookmarks', $vName == 'bookmarks');
 		JSubMenuHelper::addEntry(JText::_('COM_BOOKMARKSDIDDIPOELER_SUBMENU_CATEGORIES'), 'index.php?option=com_categories&extension=com_bookmarksdiddipoeler', $vName == 'categories');
-		
-//        JSubMenuHelper::addEntry(JText::_('COM_DPCALENDAR_SUBMENU_LOCATIONS'), 'index.php?option=com_dpcalendar&view=locations',
-//				$vName == 'locations');
-
-//		if (! self::isFree())
-//		{
-//			JSubMenuHelper::addEntry(JText::_('COM_DPCALENDAR_SUBMENU_ATTENDEES'), 'index.php?option=com_dpcalendar&view=attendees',
-//					$vName == 'attendees');
-//		}
-
-//		JSubMenuHelper::addEntry(JText::_('COM_DPCALENDAR_SUBMENU_TOOLS'), 'index.php?option=com_dpcalendar&view=tools', $vName == 'tools');
-//		JSubMenuHelper::addEntry(JText::_('COM_DPCALENDAR_SUBMENU_SUPPORT'), 'index.php?option=com_dpcalendar&view=support', $vName == 'support');
 
 		if ($vName == 'categories')
 		{
@@ -60,6 +64,12 @@ public static function isJoomlaVersion ($version)
 		}
 	}
     
+    /**
+     * bookmarksdiddipoelerHelper::getActions()
+     * 
+     * @param integer $categoryId
+     * @return
+     */
     public static function getActions ($categoryId = 0)
 	{
 		$user = JFactory::getUser();
