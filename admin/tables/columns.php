@@ -11,7 +11,7 @@ jimport('joomla.database.table');
 jimport( 'joomla.filter.input' );
 
 
-class bookmarks_diddipoelerTablecolumns extends JTable
+class bookmarksdiddipoelerTablecolumns extends JTable
 {
 	/**
 	 * Constructor

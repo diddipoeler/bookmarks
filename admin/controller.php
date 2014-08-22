@@ -2,7 +2,7 @@
 
 defined('_JEXEC') or die();
 
-class bookmarks_diddipoelerController extends JControllerLegacy
+class bookmarksdiddipoelerController extends JControllerLegacy
 {
 
 	public function display ($cachable = false, $urlparams = false)
@@ -13,7 +13,7 @@ class bookmarks_diddipoelerController extends JControllerLegacy
 
 		if ($view != 'event' && $view != 'location' && $view != 'attendee')
 		{
-			bookmarksHelper::addSubmenu(JRequest::getCmd('view', 'cpanel'));
+			bookmarksdiddipoelerHelper::addSubmenu(JRequest::getCmd('view', 'cpanel'));
 		}
 /*
 		// Check for edit form.

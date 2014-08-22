@@ -2,7 +2,7 @@
 
 defined('_JEXEC') or die();
 
-class bookmarks_diddipoelerView extends JViewLegacy
+class bookmarksdiddipoelerView extends JViewLegacy
 {
 
 	protected $icon = '';
@@ -17,11 +17,11 @@ class bookmarks_diddipoelerView extends JViewLegacy
 			return false;
 		}
 
-		if (bookmarksHelper::isJoomlaVersion('2.5'))
+		if (bookmarksdiddipoelerHelper::isJoomlaVersion('2.5'))
 		{
 			$this->setLayout($this->getLayout() . '_25');
 		}
-		if (bookmarksHelper::isJoomlaVersion('3'))
+		if (bookmarksdiddipoelerHelper::isJoomlaVersion('3'))
 		{
 			$this->setLayout($this->getLayout() . '_3');
 		}
@@ -34,11 +34,11 @@ class bookmarks_diddipoelerView extends JViewLegacy
 
 	protected function addToolbar ()
 	{
-		$canDo = bookmarksHelper::getActions();
+		$canDo = bookmarksdiddipoelerHelper::getActions();
 
 		if (empty($this->title))
 		{
-			$this->title = 'COM_BOOKMARKS_DIDDIPOELER_MANAGER_' . strtoupper($this->getName());
+			$this->title = 'COM_BOOKMARKSDIDDIPOELER_MANAGER_' . strtoupper($this->getName());
 		}
 		if (empty($this->icon))
 		{
@@ -47,12 +47,12 @@ class bookmarks_diddipoelerView extends JViewLegacy
 		JToolBarHelper::title(JText::_($this->title), $this->icon);
 		$document = JFactory::getDocument();
 		$document->addStyleDeclaration(
-				'.icon-48-' . $this->icon . ' {background-image: url(../media/com_bookmarks_diddipoeler/images/admin/48-' . $this->icon .
+				'.icon-48-' . $this->icon . ' {background-image: url(../media/com_bookmarksdiddipoeler/images/admin/48-' . $this->icon .
 						 '.png);background-repeat: no-repeat;}');
 
 		if ($canDo->get('core.admin'))
 		{
-			JToolBarHelper::preferences('com_bookmarks_diddipoeler');
+			JToolBarHelper::preferences('com_bookmarksdiddipoeler');
 			JToolBarHelper::divider();
 		}
 	}

@@ -2,24 +2,24 @@
 
 defined('_JEXEC') or die();
 
-JLoader::import('components.com_bookmarks_diddipoeler.helpers.bookmarks', JPATH_ADMINISTRATOR);
+JLoader::import('components.com_bookmarksdiddipoeler.helpers.bookmarksdiddipoeler', JPATH_ADMINISTRATOR);
 
-if (! JFactory::getUser()->authorise('core.manage', 'com_bookmarks_diddipoeler'))
+if (! JFactory::getUser()->authorise('core.manage', 'com_bookmarksdiddipoeler'))
 {
 	return JError::raiseWarning(404, JText::_('JERROR_ALERTNOAUTHOR'));
 }
 
 JLoader::import('joomla.application.component.controller');
 
-$path = JPATH_ADMINISTRATOR . DS . 'components' . DS . 'com_bookmarks_diddipoeler' . DS . 'bookmarks.xml';
+$path = JPATH_ADMINISTRATOR . DS . 'components' . DS . 'com_bookmarksdiddipoeler' . DS . 'bookmarks.xml';
 if (file_exists($path))
 {
 	$manifest = simplexml_load_file($path);
-	JRequest::setVar('DPCALENDAR_VERSION', $manifest->version);
+	JRequest::setVar('BOOKMARKSDIDDIPOELER_VERSION', $manifest->version);
 }
 else
 {
-	JRequest::setVar('DPCALENDAR_VERSION', '');
+	JRequest::setVar('BOOKMARKSDIDDIPOELER_VERSION', '');
 }
 
 if (version_compare(PHP_VERSION, '5.3.0') < 0)
@@ -30,6 +30,6 @@ if (version_compare(PHP_VERSION, '5.3.0') < 0)
 	return;
 }
 
-$controller = JControllerLegacy::getInstance('bookmarks_diddipoeler');
+$controller = JControllerLegacy::getInstance('bookmarksdiddipoeler');
 $controller->execute(JFactory::getApplication()->input->get('task'));
 $controller->redirect();

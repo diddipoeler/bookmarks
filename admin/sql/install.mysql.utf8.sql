@@ -32,6 +32,10 @@ CREATE TABLE IF NOT EXISTS `#__bookmarks` (
   `openwin` tinyint(1) DEFAULT '1',
   `keywords` varchar(255) DEFAULT '',
   `credits` int(11) DEFAULT '0',
+  
+  `catid` int(11) NOT NULL DEFAULT '0',
+  `language` char(7) NOT NULL DEFAULT '',
+  
   PRIMARY KEY (`id`),
   KEY `title` (`title`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

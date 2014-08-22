@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="2.5" method="upgrade">
  
-	<name>COM_BOOKMARKS_DIDDIPOELER</name>
+	<name>COM_BOOKMARKSDIDDIPOELER</name>
 	<!-- The following elements are optional and free of formatting conttraints -->
 	<creationDate>August 2014</creationDate>
 	<author>diddipoeler</author>
@@ -10,9 +10,9 @@
 	<copyright>Copyright Info</copyright>
 	<license>License Info</license>
 	<!--  The version string is recorded in the components table -->
-	<version>1.0.00</version>
+	<version>1.0.01</version>
 	<!-- The description is optional and defaults to the name -->
-	<description>COM_BOOKMARKS_DIDDIPOELER_DESCRIPTION</description>
+	<description>COM_BOOKMARKSDIDDIPOELER_DESCRIPTION</description>
  
 	<!-- Runs on install/uninstall/update; New in 1.6 -->
 	<scriptfile>script.php</scriptfile>
@@ -39,7 +39,7 @@
 		in this section are copied from /site/ in the package -->
 	<files folder="site">
 		<filename>index.html</filename>
-		<filename>bookmarks_diddipoeler.php</filename>
+		<filename>bookmarksdiddipoeler.php</filename>
 		<filename>controller.php</filename>
 		<folder>views</folder>
 		<folder>helpers</folder>
@@ -51,11 +51,11 @@
 	</files>
 	
 	<languages folder="site">
-		<language tag="de-DE">language/de-DE/de-DE.com_bookmarks_diddipoeler.ini</language>
-		<language tag="en-GB">language/en-GB/en-GB.com_bookmarks_diddipoeler.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.com_bookmarksdiddipoeler.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.com_bookmarksdiddipoeler.ini</language>
 	</languages>
 	
-  <media destination="com_bookmarks_diddipoeler" folder="media/com_bookmarks_diddipoeler">
+  <media destination="com_bookmarksdiddipoeler" folder="media/com_bookmarksdiddipoeler">
 		<filename>index.html</filename>
 	  <filename>ext_tem.png</filename>
 	  <filename>ext_com.png</filename>
@@ -68,7 +68,7 @@
 	
 	<administration>
 		<!-- Administration Menu Section -->
-		<menu img="../administrator/components/com_bookmarks_diddipoeler/assets/icons/transparent_schrift_16.png">COM_BOOKMARKS_DIDDIPOELER_MENU</menu>
+		<menu img="../administrator/components/com_bookmarksdiddipoeler/assets/icons/transparent_schrift_16.png">COM_BOOKMARKSDIDDIPOELER_MENU</menu>
 		<!-- Administration Main File Copy Section -->
 		<!-- Note the folder attribute: This attribute describes the folder
 			to copy FROM in the package to install therefore files copied
@@ -78,7 +78,7 @@
 			<filename>index.html</filename>
 			<filename>config.xml</filename>
 			<filename>access.xml</filename>
-			<filename>bookmarks_diddipoeler.php</filename>
+			<filename>bookmarksdiddipoeler.php</filename>
 			<filename>controller.php</filename>
 			<!-- assets files section -->
 			<folder>assets</folder>
@@ -103,10 +103,10 @@
 		</files>
  
 		<languages folder="admin">
-			<language tag="de-DE">language/de-DE/de-DE.com_bookmarks_diddipoeler.ini</language>
-			<language tag="de-DE">language/de-DE/de-DE.com_bookmarks_diddipoeler.sys.ini</language>
-			<language tag="en-GB">language/en-GB/en-GB.com_bookmarks_diddipoeler.ini</language>
-			<language tag="en-GB">language/en-GB/en-GB.com_bookmarks_diddipoeler.sys.ini</language>
+			<language tag="de-DE">language/de-DE/de-DE.com_bookmarksdiddipoeler.ini</language>
+			<language tag="de-DE">language/de-DE/de-DE.com_bookmarksdiddipoeler.sys.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_bookmarksdiddipoeler.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_bookmarksdiddipoeler.sys.ini</language>
 			</languages>
 		
 	</administration>

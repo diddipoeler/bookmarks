@@ -2,14 +2,14 @@
 
 defined('_JEXEC') or die();
 
-JLoader::import('components.com_bookmarks_diddipoeler.libraries.bookmarks.view', JPATH_ADMINISTRATOR);
+JLoader::import('components.com_bookmarksdiddipoeler.libraries.bookmarks.view', JPATH_ADMINISTRATOR);
 
-class bookmarks_diddipoelerViewCpanel extends bookmarks_diddipoelerView
+class bookmarksdiddipoelerViewCpanel extends bookmarksdiddipoelerView
 {
 
 	protected $icon = 'bookmarks';
 
-	protected $title = 'COM_BOOKMARKS_DIDDIPOELER_VIEW_CPANEL';
+	protected $title = 'COM_BOOKMARKSDIDDIPOELER_VIEW_CPANEL';
 
 	protected function init ()
 	{

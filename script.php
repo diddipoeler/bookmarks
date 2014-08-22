@@ -7,7 +7,7 @@ jimport('joomla.installer.installer');
  
 
 
-class com_bookmarks_diddipoelerInstallerScript
+class com_bookmarksdiddipoelerInstallerScript
 {
 	/*
      * The release value would ideally be extracted from <version> in the manifest file,
@@ -23,7 +23,7 @@ class com_bookmarks_diddipoelerInstallerScript
 	function install($parent) 
 	{
 		// $parent is the class calling this method
-		$parent->getParent()->setRedirectURL('index.php?option=com_bookmarks_diddipoeler');
+		$parent->getParent()->setRedirectURL('index.php?option=com_bookmarksdiddipoeler');
 	}
  
 	/**
@@ -34,7 +34,7 @@ class com_bookmarks_diddipoelerInstallerScript
 	function uninstall($parent) 
 	{
 		// $parent is the class calling this method
-		echo '<p>' . JText::_('COM_SPORTSMANAGEMENT_UNINSTALL_TEXT') . '</p>';
+		echo '<p>' . JText::_('COM_BOOKMARKSDIDDIPOELER_UNINSTALL_TEXT') . '</p>';
 	}
  
 	/**
@@ -45,7 +45,7 @@ class com_bookmarks_diddipoelerInstallerScript
 	function update($parent) 
 	{
 		// $parent is the class calling this method
-		echo '<p>' . JText::_('COM_SPORTSMANAGEMENT_UPDATE_TEXT') . $parent->get('manifest')->version . '</p>';
+		echo '<p>' . JText::_('COM_BOOKMARKSDIDDIPOELER_UPDATE_TEXT') . $parent->get('manifest')->version . '</p>';
 	}
  
 	/**
@@ -59,11 +59,11 @@ class com_bookmarks_diddipoelerInstallerScript
 						'allowAllClose' => true,
 						'startTransition' => true,
 						true));
-       $image = '<img src="../media/com_bookmarks_diddipoeler/ext_com.png">';
+       $image = '<img src="../media/com_bookmarksdiddipoeler/ext_com.png">';
 		echo JHtml::_('sliders.panel', $image.' Component', 'panel-component');                      
 		// $parent is the class calling this method
 		// $type is the type of change (install, update or discover_install)
-		echo '<p>' . JText::_('COM_SPORTSMANAGEMENT_PREFLIGHT_' . $type . '_TEXT' ) . $parent->get('manifest')->version . '</p>';
+		echo '<p>' . JText::_('COM_BOOKMARKSDIDDIPOELER_PREFLIGHT_' . $type . '_TEXT' ) . $parent->get('manifest')->version . '</p>';
 	}
  
 	/**
@@ -73,29 +73,29 @@ class com_bookmarks_diddipoelerInstallerScript
 	 */
 	function postflight($type, $parent) 
 	{
-	$mainframe =& JFactory::getApplication();
+	$mainframe = JFactory::getApplication();
     $db = JFactory::getDbo();
     
-    //echo JHtml::_('sliders.start','steps',array(
+//    echo JHtml::_('sliders.start','steps',array(
 //						'allowAllClose' => true,
 //						'startTransition' => true,
 //						true));
                    
         // $parent is the class calling this method
 		// $type is the type of change (install, update or discover_install)
-		echo '<p>' . JText::_('COM_SPORTSMANAGEMENT_POSTFLIGHT_' . $type . '_TEXT' ) . $parent->get('manifest')->version . '</p>';
+		echo '<p>' . JText::_('COM_BOOKMARKSDIDDIPOELER_POSTFLIGHT_' . $type . '_TEXT' ) . $parent->get('manifest')->version . '</p>';
     
 //$db->setQuery('SELECT params FROM #__extensions WHERE name = "com_sportsmanagement" and type ="component"');
 //$paramsdata = json_decode( $db->loadResult(), true );
 
 //$mainframe->enqueueMessage(JText::_('postflight paramsdata<br><pre>'.print_r($paramsdata,true).'</pre>'   ),'');
 
-$params = JComponentHelper::getParams('com_bookmarks_diddipoeler');
-$xmlfile = JPATH_ADMINISTRATOR.DS.'components'.DS.'com_bookmarks_diddipoeler'.DS.'config.xml';  
+$params = JComponentHelper::getParams('com_bookmarksdiddipoeler');
+$xmlfile = JPATH_ADMINISTRATOR.DS.'components'.DS.'com_bookmarksdiddipoeler'.DS.'config.xml';  
 $jRegistry = new JRegistry;
 $jRegistry->loadString($params->toString('ini'), 'ini');
 //$form =& JForm::getInstance('com_sportsmanagement', $xmlfile, array('control'=> 'params'), false, "/config");
-$form =& JForm::getInstance('com_bookmarks_diddipoeler', $xmlfile,array('control'=> ''), false, "/config");
+$form =& JForm::getInstance('com_bookmarksdiddipoeler', $xmlfile,array('control'=> ''), false, "/config");
 $form->bind($jRegistry);
 $newparams = array();
 foreach($form->getFieldset($fieldset->name) as $field)
@@ -113,13 +113,13 @@ switch ($type)
     case "install":
     self::setParams($newparams);
 //    self::installComponentLanguages();
-$image = '<img src="../media/com_bookmarks_diddipoeler/ext_mod.png">';
+$image = '<img src="../media/com_bookmarksdiddipoeler/ext_mod.png">';
 		echo JHtml::_('sliders.panel', $image.' Modules', 'panel-modules');
   //  self::installModules($parent);
-    $image = '<img src="../media/com_bookmarks_diddipoeler/ext_plugin.png">';
+    $image = '<img src="../media/com_bookmarksdiddipoeler/ext_plugin.png">';
 		echo JHtml::_('sliders.panel', $image.' Plugins', 'panel-plugins');
    // self::installPlugins($parent);
-    $image = '<img src="../media/com_bookmarks_diddipoeler/ext_esp.png">';
+    $image = '<img src="../media/com_bookmarksdiddipoeler/ext_esp.png">';
 		echo JHtml::_('sliders.panel', $image.' Create/Update Images Folders', 'panel-images');
    // self::createImagesFolder();
 //    self::migratePicturePath();
@@ -128,13 +128,13 @@ $image = '<img src="../media/com_bookmarks_diddipoeler/ext_mod.png">';
     break;
     case "update":
 //    self::installComponentLanguages();
-$image = '<img src="../media/com_bookmarks_diddipoeler/ext_mod.png">';
+$image = '<img src="../media/com_bookmarksdiddipoeler/ext_mod.png">';
 		echo JHtml::_('sliders.panel', $image.' Modules', 'panel-modules');
     //self::installModules($parent);
-    $image = '<img src="../media/com_bookmarks_diddipoeler/ext_plugin.png">';
+    $image = '<img src="../media/com_bookmarksdiddipoeler/ext_plugin.png">';
 		echo JHtml::_('sliders.panel', $image.' Plugins', 'panel-plugins');
     //self::installPlugins($parent);
-    $image = '<img src="../media/com_bookmarks_diddipoeler/ext_esp.png">';
+    $image = '<img src="../media/com_bookmarksdiddipoeler/ext_esp.png">';
 		echo JHtml::_('sliders.panel', $image.' Create/Update Images Folders', 'panel-images');
     //self::createImagesFolder();
 //    self::migratePicturePath();
