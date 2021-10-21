@@ -1,8 +1,8 @@
 <?php
 /**
  * @package    bookmark diddipoeler
- * @author     Dieter Plöger http://www.fussballineuropa.de
- * @copyright  Copyright (C) 2014 Dieter Plöger. All rights reserved.
+ * @author     Dieter PlÃ¶ger http://www.fussballineuropa.de
+ * @copyright  Copyright (C) 2014 Dieter PlÃ¶ger. All rights reserved.
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL
  */
 
