@@ -1,13 +1,15 @@
 <?php
 /**
  * @package    bookmark diddipoeler
- * @author     Dieter Plöger http://www.fussballineuropa.de
- * @copyright  Copyright (C) 2014 Dieter Plöger. All rights reserved.
+ * @author     Dieter PlÃ¶ger http://www.fussballineuropa.de
+ * @copyright  Copyright (C) 2014 Dieter PlÃ¶ger. All rights reserved.
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL
  */
 
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
+use Joomla\CMS\Language\Text;
+use Joomla\CMS\Factory;
 
 jimport('joomla.installer.installer');
 
@@ -88,8 +90,8 @@ class com_bookmarksdiddipoelerInstallerScript
 	 */
 	function postflight($type, $parent) 
 	{
-	$mainframe = JFactory::getApplication();
-    $db = JFactory::getDbo();
+	$mainframe = Factory::getApplication();
+    $db = Factory::getDbo();
     
 //    echo JHtml::_('sliders.start','steps',array(
 //						'allowAllClose' => true,
@@ -173,8 +175,8 @@ echo JHtml::_('sliders.end');
      */
     public function createImagesFolder()
 	{
-		$mainframe = JFactory::getApplication();
-  $db = JFactory::getDBO();
+		$mainframe = Factory::getApplication();
+  $db = Factory::getDBO();
   
         //echo JText::_('Creating new Image Folder structure');
 		$dest = JPATH_ROOT.'/images/com_sportsmanagement';
@@ -253,8 +255,8 @@ echo JHtml::_('sliders.end');
     function setParams($param_array) 
     {
         
-        $mainframe =& JFactory::getApplication();
-        $db = JFactory::getDbo();
+        $mainframe = Factory::getApplication();
+        $db = Factory::getDbo();
         /*
         if ( count($param_array) > 0 )
         {
