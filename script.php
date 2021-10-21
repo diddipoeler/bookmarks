@@ -106,7 +106,7 @@ class com_bookmarksdiddipoelerInstallerScript
 //$paramsdata = json_decode( $db->loadResult(), true );
 
 //$mainframe->enqueueMessage(JText::_('postflight paramsdata<br><pre>'.print_r($paramsdata,true).'</pre>'   ),'');
-
+/*
 $params = JComponentHelper::getParams('com_bookmarksdiddipoeler');
 $xmlfile = JPATH_ADMINISTRATOR.DS.'components'.DS.'com_bookmarksdiddipoeler'.DS.'config.xml';  
 $jRegistry = new JRegistry;
@@ -124,7 +124,7 @@ foreach($form->getFieldset($fieldset->name) as $field)
         $newparams[$field->name] = $field->value;
         
         }
-
+*/
 switch ($type)        
     {
     case "install":
