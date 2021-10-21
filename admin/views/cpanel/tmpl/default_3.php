@@ -44,16 +44,7 @@ JFactory::getDocument()->addStyleSheet('components/com_dpcalendar/views/cpanel/t
                 <span><?php echo JText::_('COM_DPCALENDAR_VIEW_CPANEL_LOCATIONS'); ?></span>
                 </a>
             </div>
-            <?php if (!DPCalendarHelper::isFree())
-            {?>
-            <div class="icon">
-                <a href="index.php?option=com_dpcalendar&view=attendees" >
-                <img src="<?php echo JURI::base(true);?>/../media/com_dpcalendar/images/admin/48-attendees.png" height="50px" width="50px">
-                <span><?php echo JText::_('COM_DPCALENDAR_VIEW_CPANEL_ATTENDEES'); ?></span>
-                </a>
-            </div>
-            <?php
-            }?>
+            
             <div class="icon">
                 <a href="index.php?option=com_dpcalendar&view=tools" >
                 <img src="<?php echo JURI::base(true);?>/../media/com_dpcalendar/images/admin/48-tools.png" height="50px" width="50px">
