@@ -8,7 +8,7 @@
 
 defined('_JEXEC') or die();
 
-DPCalendarHelper::loadLibrary();
+//DPCalendarHelper::loadLibrary();
 JFactory::getDocument()->addStyleSheet('components/com_dpcalendar/views/cpanel/tmpl/default_3.css');
 ?>
 <div style="width:500px;">
